@@ -1,9 +1,6 @@
 package com.green.board3;
 
-import com.green.board3.model.BoardGetOneRes;
-import com.green.board3.model.BoardGetRes;
-import com.green.board3.model.BoardPostReq;
-import com.green.board3.model.BoardPutReq;
+import com.green.board3.model.*;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -14,4 +11,5 @@ public interface BoardMapper {
     List<BoardGetRes> selBoardList();
     BoardGetOneRes selBoardOne(int boardId);
     int updBoard(BoardPutReq p);
+    int delBoard(BoardDelReq p);
 }

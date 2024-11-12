@@ -1,9 +1,6 @@
 package com.green.board3;
 
-import com.green.board3.model.BoardGetOneRes;
-import com.green.board3.model.BoardGetRes;
-import com.green.board3.model.BoardPostReq;
-import com.green.board3.model.BoardPutReq;
+import com.green.board3.model.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,6 +31,11 @@ public class BoardController {
     @PutMapping
     public int updBoard(@RequestBody BoardPutReq p) {
         return service.updBoard(p);
+    }
+
+    @DeleteMapping
+    public int delBoard(@ModelAttribute BoardDelReq p) {
+        return service.delBoard(p);
     }
 
 }

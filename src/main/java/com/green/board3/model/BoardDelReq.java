@@ -8,4 +8,6 @@ import lombok.ToString;
 @Setter
 @ToString
 public class BoardDelReq {
+    private int boardId;
+    private String writer;
 }
