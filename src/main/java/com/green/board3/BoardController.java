@@ -23,14 +23,14 @@ public class BoardController {
         return service.getBoardList();
     }
 
-    @GetMapping("{boardId}")
+    @GetMapping("{boardId}") //@PathVariable: URL 경로의 변수를 메서드 파라미터로 받을 때 사용하는 애노테이션
     public BoardGetOneRes getBoardOne(@PathVariable int boardId) {
         return service.getBoardOne(boardId);
     }
 
     @PutMapping
-    public int updBoard(@RequestBody BoardPutReq p) {
-        return service.updBoard(p);
+    public int putBoard(@RequestBody BoardPutReq p) {
+        return service.putBoard(p);
     }
 
     @DeleteMapping

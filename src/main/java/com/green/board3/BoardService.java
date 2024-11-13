@@ -23,7 +23,7 @@ public class BoardService {
         return mapper.selBoardOne(boardId);
     }
 
-    public int updBoard(BoardPutReq p) {
+    public int putBoard(BoardPutReq p) {
         return mapper.updBoard(p);
     }
 
