@@ -28,6 +28,12 @@ public class BoardController {
         return service.getBoardOne(boardId);
     }
 
+    /*
+    @GetMapping("{boardId}")
+    public SelOne selOne(@PathVariable("boardId") int p){
+    return service.selOne(p);
+     */
+
     @PutMapping
     public int putBoard(@RequestBody BoardPutReq p) {
         return service.putBoard(p);
